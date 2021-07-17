@@ -92,13 +92,16 @@ main {
 
 ul {
   height: 50rem;
+  /* width: 92rem; */
   background-color: var(--suv-color);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(33.3333%, (65.4rem - 100%) * 999, 100%), 1fr));
   border-radius: 0.8rem;
 }
 
 ul li {
   border-radius: 0.8rem;
+  /* min-width: 327px; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
