@@ -72,11 +72,16 @@ table {
   --very-light-gray: hsl(0, 0%, 95%);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%; /*10 px*/
 }
 
 body {
+  font-family: "Lexend Deca", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,12 +105,13 @@ ul {
 }
 
 ul li {
+  padding: 4.8rem;
   border-radius: 0.8rem;
   /* min-width: 327px; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
 }
 
 ul li:first-child {
@@ -126,10 +132,27 @@ h2 {
 }
 
 p {
-  font-family: "Lexend Deca", sans-serif;
   line-height: 2.5rem;
-  width: 70%;
+  /* width: 70%; */
+  color: var(--white-transparent-75);
 }
 
 /* font-family: 'Big Shoulders Display', cursive;
 font-family: 'Lexend Deca', sans-serif; */
+
+/* button */
+
+button {
+  font-size: 100%;
+  font-family: inherit;
+  width: 146px;
+  height: 48px;
+  background-color: inherit;
+  color: var(--very-light-gray);
+  border: 2px var(--very-light-gray) solid;
+  border-radius: 25px;
+}
+
+button:hover {
+  background-color: var(--very-light-gray);
+}
