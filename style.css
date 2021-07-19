@@ -81,7 +81,7 @@ html {
 }
 
 body {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,13 +92,15 @@ body {
 
 main {
   width: clamp(32.7rem, 87.2vw, 92rem);
-  height: 50rem;
+  min-height: 50rem;
+  max-height: 1326px;
 }
 
 ul {
-  height: 50rem;
+  justify-content: flex-end;
+  /* height: 100%; */
+  background-color: var(--sedan-color);
   /* width: 92rem; */
-  background-color: var(--suv-color);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(clamp(33.3333%, (65.4rem - 100%) * 999, 100%), 1fr));
   border-radius: 0.8rem;
@@ -106,25 +108,35 @@ ul {
 
 ul li {
   padding: 4.8rem;
-  border-radius: 0.8rem;
   /* min-width: 327px; */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  /* align-items: center; */
 }
 
-ul li:first-child {
+.sedan,
+.suv,
+.luxury {
+  border-radius: 0.8rem;
+}
+
+.sedan {
   background-color: var(--sedan-color);
 }
-ul li:last-child {
+
+.suv {
+  background-color: var(--suv-color);
+}
+
+.luxury {
   background-color: var(--luxury-color);
 }
 
 /*TEXT */
 
 h2 {
-  font-family: "Big Shoulders Display", cursive;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+  font-family: 'Big Shoulders Display', cursive;
   font-size: 4rem;
   line-height: 4.8rem;
   text-transform: uppercase;
@@ -132,6 +144,7 @@ h2 {
 }
 
 p {
+  margin-bottom: 8.3rem; /* 83 px in desktop vs 25 px in mobile */
   line-height: 2.5rem;
   /* width: 70%; */
   color: var(--white-transparent-75);
@@ -151,8 +164,21 @@ button {
   color: var(--very-light-gray);
   border: 2px var(--very-light-gray) solid;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 button:hover {
   background-color: var(--very-light-gray);
+}
+
+.sedan button:hover {
+  color: var(--sedan-color);
+}
+
+.suv button:hover {
+  color: var(--suv-color);
+}
+
+.luxury button:hover {
+  color: var(--luxury-color);
 }
