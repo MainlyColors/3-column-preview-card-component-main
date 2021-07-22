@@ -54,6 +54,7 @@ table {
 
 /* from frontend mentor*/
 .attribution {
+  margin: 2.5rem auto;
   font-size: 11px;
   text-align: center;
 }
@@ -81,7 +82,7 @@ html {
 }
 
 body {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,15 +93,13 @@ body {
 
 main {
   width: clamp(32.7rem, 87.2vw, 92rem);
-  min-height: 50rem;
-  max-height: 1326px;
 }
 
 ul {
+  min-height: 50rem;
+  max-height: 1326px;
   justify-content: flex-end;
-  /* height: 100%; */
   background-color: var(--sedan-color);
-  /* width: 92rem; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(clamp(33.3333%, (65.4rem - 100%) * 999, 100%), 1fr));
   border-radius: 0.8rem;
@@ -108,9 +107,9 @@ ul {
 
 ul li {
   padding: 4.8rem;
-  /* min-width: 327px; */
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 40px 35px 48px 25px minmax(125px, 1fr) 83px min-content;
 }
 
 .sedan,
@@ -134,9 +133,8 @@ ul li {
 /*TEXT */
 
 h2 {
-  margin-top: 3.5rem;
-  margin-bottom: 2.5rem;
-  font-family: 'Big Shoulders Display', cursive;
+  grid-row: 3 / 4;
+  font-family: "Big Shoulders Display", cursive;
   font-size: 4rem;
   line-height: 4.8rem;
   text-transform: uppercase;
@@ -144,18 +142,16 @@ h2 {
 }
 
 p {
-  margin-bottom: 8.3rem; /* 83 px in desktop vs 25 px in mobile */
+  grid-row: 5 / 6;
   line-height: 2.5rem;
-  /* width: 70%; */
+  max-width: 25ch;
   color: var(--white-transparent-75);
 }
-
-/* font-family: 'Big Shoulders Display', cursive;
-font-family: 'Lexend Deca', sans-serif; */
 
 /* button */
 
 button {
+  grid-row: 7 / 8;
   font-size: 100%;
   font-family: inherit;
   width: 146px;
@@ -181,4 +177,17 @@ button:hover {
 
 .luxury button:hover {
   color: var(--luxury-color);
+}
+
+@media only screen and (max-width: 46.9375em) {
+  main {
+    max-width: 32.7rem;
+  }
+
+  ul li {
+    min-width: 327px;
+    justify-self: center;
+    grid-template-rows: 40px 35px 48px 25px minmax(125px, 1fr) 25px min-content;
+    font-size: 1em;
+  }
 }
