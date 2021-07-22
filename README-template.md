@@ -50,32 +50,18 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Desktop-first workflow
+- Reponsive Design Principles 
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+During this project I was running into some issues with the fluid grid layout for the (3) cards when the screen width was narrow enough for (2) card space. The cards would stack in a ugly 2 rows, 2 columns when really I wanted them to stack in 3 rows, 1 column. After doing some research I came across this [blog](https://blog.logrocket.com/flexible-layouts-without-media-queries/) by [Dannie Vinther](https://blog.logrocket.com/author/dannievinther/) where the technique called the "Holy Albatross" by [Heydon Pickering](https://heydonworks.com/) is explained. The article does a good job explaining exactly how this works but to give a quick summary it takes advantage of how the browser calculates minmax when at extreme values. In the below CSS snipnet the "65.4rem" defines the maxium width before the columns will break into 1 column of 3 rows.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(33.3333%, (65.4rem - 100%) * 999, 100%), 1fr));
 }
 ```
 
