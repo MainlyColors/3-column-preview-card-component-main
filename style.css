@@ -82,7 +82,7 @@ html {
 }
 
 body {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,7 +97,7 @@ main {
 
 ul {
   min-height: 50rem;
-  max-height: 1326px;
+  max-height: 132.6rem;
   justify-content: flex-end;
   background-color: var(--sedan-color);
   display: grid;
@@ -109,7 +109,7 @@ ul li {
   padding: 4.8rem;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 40px 35px 48px 25px minmax(125px, 1fr) 83px min-content;
+  grid-template-rows: 4rem 3.5rem 4.8rem 2.5rem minmax(1.25rem, 1fr) 8.3rem min-content;
 }
 
 .sedan,
@@ -134,7 +134,7 @@ ul li {
 
 h2 {
   grid-row: 3 / 4;
-  font-family: "Big Shoulders Display", cursive;
+  font-family: 'Big Shoulders Display', cursive;
   font-size: 4rem;
   line-height: 4.8rem;
   text-transform: uppercase;
@@ -154,12 +154,12 @@ button {
   grid-row: 7 / 8;
   font-size: 100%;
   font-family: inherit;
-  width: 146px;
-  height: 48px;
+  width: 14.6rem;
+  height: 4.8rem;
   background-color: inherit;
   color: var(--very-light-gray);
   border: 2px var(--very-light-gray) solid;
-  border-radius: 25px;
+  border-radius: 2.5rem;
   cursor: pointer;
 }
 
@@ -185,9 +185,9 @@ button:hover {
   }
 
   ul li {
-    min-width: 327px;
+    min-width: 32.7rem;
     justify-self: center;
-    grid-template-rows: 40px 35px 48px 25px minmax(125px, 1fr) 25px min-content;
+    grid-template-rows: 4rem 3.5rem 4.8rem 2.5rem minmax(1.25rem, 1fr) 2.5rem min-content;
     font-size: 1em;
   }
 }
