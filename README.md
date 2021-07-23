@@ -41,7 +41,7 @@ Mobile Design - bottom part of luxury card got cropped out of the screenshot
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/html-css-and-responsive-design-approach-any-feedback-welcomed-jS8BDHBQG)
 - Live Site URL: [3-column-preview-card-component-main live site](https://mainlycolors.github.io/3-column-preview-card-component-main/)
 
 ### Built with
